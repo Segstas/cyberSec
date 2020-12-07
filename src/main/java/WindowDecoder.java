@@ -34,9 +34,9 @@ public class WindowDecoder extends JFrame {
         shiftsRadio.setMnemonic(KeyEvent.VK_P);
         vijerRadio.setMnemonic(KeyEvent.VK_P);
 
-        premutationRadio.setBounds(10, 20, 170, 21);
-        shiftsRadio.setBounds(180, 20, 150, 21);
-        vijerRadio.setBounds(330, 20, 150, 21);
+        premutationRadio.setBounds(20, 20, 170, 21);
+        shiftsRadio.setBounds(200, 20, 150, 21);
+        vijerRadio.setBounds(380, 20, 150, 21);
         ButtonGroup group = new ButtonGroup();
 
         group.add(premutationRadio);
@@ -50,26 +50,26 @@ public class WindowDecoder extends JFrame {
 
 
         JLabel first = new JLabel("Расшифрованный текст");
-        first.setBounds(10, 210, 400, 21);
+        first.setBounds(70, 210, 400, 21);
         JLabel second = new JLabel("Ключ");
-        second.setBounds(10, 125, 400, 21);
+        second.setBounds(70, 125, 400, 21);
         JLabel third = new JLabel("Зашифрованный текст");
-        third.setBounds(10, 40, 400, 21);
+        third.setBounds(70, 40, 400, 21);
 
         final JTextArea f = new JTextArea();
-        f.setBounds(10, 235, 400, 21);
+        f.setBounds(70, 235, 400, 21);
         f.setSize(400, 50);
 
         final JTextArea s = new JTextArea();
-        s.setBounds(10, 150, 400, 21);
+        s.setBounds(70, 150, 400, 21);
         s.setSize(400, 50);
 
         final JTextArea t = new JTextArea();
-        t.setBounds(10, 65, 400, 21);
+        t.setBounds(70, 65, 400, 21);
         t.setSize(400, 50);
 
         JButton one = new JButton("Расшифровать");
-        one.setBounds(100, 290, 200, 21);
+        one.setBounds(250, 290, 200, 21);
         one.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button1actionActionPerformed(evt);
@@ -110,7 +110,7 @@ public class WindowDecoder extends JFrame {
             }
         });
         JButton two = new JButton("Загрузить шифр из файла");
-        two.setBounds(100, 125, 200, 21);
+        two.setBounds(250, 125, 200, 21);
         two.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button1actionActionPerformed(evt);
@@ -145,7 +145,7 @@ public class WindowDecoder extends JFrame {
         content.add(one);
         content.add(two);
 
-        setSize(500, 400);
+        setSize(550, 450);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setContentPane(content);
 

@@ -35,9 +35,9 @@ public class WindowCracker extends JFrame {
         shiftsRadio.setMnemonic(KeyEvent.VK_P);
         vijerRadio.setMnemonic(KeyEvent.VK_P);
 
-        premutationRadio.setBounds(10, 20, 170, 21);
-        shiftsRadio.setBounds(180, 20, 150, 21);
-        vijerRadio.setBounds(330, 20, 150, 21);
+        premutationRadio.setBounds(20, 20, 170, 21);
+        shiftsRadio.setBounds(200, 20, 150, 21);
+        vijerRadio.setBounds(380, 20, 150, 21);
         ButtonGroup group = new ButtonGroup();
 
         group.add(premutationRadio);
@@ -50,42 +50,42 @@ public class WindowCracker extends JFrame {
         content.add(vijerRadio);
 
 
-        JLabel second = new JLabel("Подобранный ключ");
-        second.setBounds(10, 210, 400, 21);
+        JLabel second = new JLabel("Возможные ключи");
+        second.setBounds(70, 210, 400, 21);
 
         JLabel third = new JLabel("Зашифрованный текст");
-        third.setBounds(10, 125, 400, 21);
+        third.setBounds(70, 125, 400, 21);
         JLabel first = new JLabel("Вероятное слово");
-        first.setBounds(10, 40, 400, 21);
+        first.setBounds(70, 40, 400, 21);
 
         JLabel maxKey = new JLabel("Цифра для ключа");
-        maxKey.setBounds(10, 310, 400, 21);
+        maxKey.setBounds(70, 310, 400, 21);
 
 
         JLabel maxKeyAbout = new JLabel("Для шифра Виджера - цифра это количество букв в ключе,");
         JLabel maxKeyAbout2 = new JLabel("для остальных - максимальное возможное значение ключа");
-        maxKeyAbout.setBounds(10, 400, 400, 60);
-        maxKeyAbout2.setBounds(10, 410, 400, 60);
+        maxKeyAbout.setBounds(70, 400, 400, 60);
+        maxKeyAbout2.setBounds(70, 410, 400, 60);
 
 
         final JTextArea f = new JTextArea();
-        f.setBounds(10, 65, 400, 21);
+        f.setBounds(70, 65, 400, 21);
         f.setSize(400, 50);
 
         final JTextArea s = new JTextArea();
-        s.setBounds(10, 235, 400, 21);
+        s.setBounds(70, 235, 400, 21);
         s.setSize(400, 50);
 
         final JTextArea t = new JTextArea();
         t.setSize(400, 50);
-        t.setBounds(10, 150, 400, 21);
+        t.setBounds(70, 150, 400, 21);
 
         final JTextArea maxKeyArea = new JTextArea();
         maxKeyArea.setSize(400, 50);
-        maxKeyArea.setBounds(10, 330, 400, 21);
+        maxKeyArea.setBounds(70, 330, 400, 21);
 
         JButton one = new JButton("Взломать ключ");
-        one.setBounds(200, 290, 200, 21);
+        one.setBounds(250, 290, 200, 21);
         one.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button1actionActionPerformed(evt);
@@ -118,7 +118,7 @@ public class WindowCracker extends JFrame {
             }
         });
         JButton two = new JButton("Загрузить шифр из файла");
-        two.setBounds(200, 125, 200, 21);
+        two.setBounds(250, 125, 200, 21);
         two.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button1actionActionPerformed(evt);

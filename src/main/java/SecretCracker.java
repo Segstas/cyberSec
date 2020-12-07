@@ -51,32 +51,46 @@ public class SecretCracker {
     }
 
     public String broodForceVijner(String beforeString, String outPart, int length) {
-        List <String> list = getCombinations(length);
+        StringBuilder answerConstructor = new StringBuilder();
+        List<String> list = getCombinations(length);
         for (String maybeKey : list) {
-            if  (vijnerEncoder.decode(beforeString, maybeKey).contains(outPart)){
-                return maybeKey;
+            if (vijnerEncoder.decode(beforeString, maybeKey).contains(outPart)) {
+               answerConstructor.append(maybeKey).append(", ");
+
             }
         }
-        return "";
+        int answerLength = answerConstructor.length();
+        if (answerLength == 0) {
+            return "НЕТ РЕЗУЛЬТАТА";
+        }
+        return answerConstructor.deleteCharAt(answerLength - 1).deleteCharAt(answerLength - 2).toString();
     }
 
     public String broodForceCesar(String beforeString, String outPart, int max) {
-
-        for (int i = 0; i < max; i++) {
-            if  (cezarEncoder.decode(beforeString, i).contains(outPart)){
-                return  Integer.toString(i);
+        StringBuilder answerConstructor = new StringBuilder();
+        for (int i = 0; i <= max; i++) {
+            if (cezarEncoder.decode(beforeString, i).contains(outPart)) {
+                answerConstructor.append(i).append(", ");
             }
         }
-        return "";
+        int answerLength = answerConstructor.length();
+        if (answerLength == 0) {
+            return "НЕТ РЕЗУЛЬТАТА";
+        }
+        return answerConstructor.deleteCharAt(answerLength - 1).deleteCharAt(answerLength - 2).toString();
     }
 
     public String broodForcePermutations(String beforeString, String outPart, int max) {
-
-        for (int i = 0; i < max; i++) {
-            if  (permutationsEncoder.decode(beforeString, i).contains(outPart)){
-                return  Integer.toString(i);
+        StringBuilder answerConstructor = new StringBuilder();
+        for (int i = 0; i <= max; i++) {
+            if (permutationsEncoder.decode(beforeString, i).contains(outPart)) {
+                answerConstructor.append(i).append(", ");
             }
         }
-        return "";
+        int answerLength = answerConstructor.length();
+        if (answerLength == 0) {
+            return "НЕТ РЕЗУЛЬТАТА";
+        }
+        return answerConstructor.deleteCharAt(answerLength - 1).deleteCharAt(answerLength - 2).toString();
     }
 }
